@@ -1,29 +1,30 @@
 #include "main.h"
 
 /**
- * print_sign - For checking if integer is positive, 0 or negative
- * @n: Determines if integer is greater than, less than or is zero
- * Return: Returns zero
+ * print_sign - return 0 letter not lowercase, 1 letter lowercase
+ *
+ *@n: the int to print
+ * Return: Always 0.
  */
-
 int print_sign(int n)
 {
-	int numberSign;
 	if (n > 0)
 	{
-		_putchar('+');
-		numberSign = 1;
+		_putchar ('+');
+		return (1);
 	}
-	else if (n < 0)
+
+	else if (n == 0)
 	{
-		_putchar('-');
-		numberSign = -1;
+		_putchar ('0');
+		return (0);
 	}
+
 	else
 	{
-		_putchar('0');
-		numberSign = 0;
+		_putchar ('-');
+		return (-1);
 	}
-	return (numberSign);
+
 }
 
