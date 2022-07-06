@@ -1,25 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Generate Fibonacci sequence by adding the previous terms
- * Return: Returns 0
+ * main - Prints the first 50 Fibonacci numbers; start with 1 and 2
+ * Return: zero
  */
 
 int main(void)
 {
-	long int x, y, z, sum;
+	int c;
+	long int c1, c2, c3;
 
-	y = 1;
-	z = 2;
-
-	for (x = 0, sum = 0; y < 4000000; x++)
+	c1 = 1;
+	c2 = 2;
+	printf("%ld, %ld", c1, c2);
+	for (c = 0; c < 48; c++)
 	{
-		if (!(y % 2))
-			sum += y;
-		z = y + z;
-		y = z - y;
+		c3 = c1 + c2;
+		printf(", %ld", c3);
+		c1 = c2;
+		c2 = c3;
 	}
-	printf("%ld\n", sum);
+	printf("\n");
 	return (0);
 }
 
